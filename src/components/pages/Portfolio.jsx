@@ -9,24 +9,31 @@ import { AnimatePresence, motion } from "framer-motion";
 const images = [image1, image2, image3];
 
 const variants = {
-  initial: {
-    x: 200,
-    opacity: 0,
+  initial: (direction) => {
+    return {
+      x: direction > 0 ? 200 : -200,
+      opacity: 0,
+    };
   },
   animate: {
     x: 0,
     opacity: 1,
   },
-  exit: {
-    x: -200,
-    opacity: 0,
+  exit: (direction) => {
+    return {
+      x: direction > 0 ? -200 : 200,
+      opacity: 0,
+    };
   },
 };
 
 export default function Portfolio() {
   const [index, setIndex] = useState(0);
 
+  const [direction, setDirection] = useState(0);
+
   const nextStep = () => {
+    setDirection(1);
     if (index === images.length - 1) {
       setIndex(0);
       return;
@@ -35,6 +42,7 @@ export default function Portfolio() {
   };
 
   const prevStep = () => {
+    setDirection(-1);
     if (index === 0) {
       setIndex(images.length - 1);
       return;
@@ -52,7 +60,7 @@ export default function Portfolio() {
             </p>
             <div className="container flex">
               <div className=" m-auto aspect-[16/9] relative overflow-hidden rounded-[16px] w-[120vh]">
-                <AnimatePresence>
+                <AnimatePresence initial={false} custom={direction}>
                   <motion.img
                     variants={variants}
                     animate="animate"
@@ -62,6 +70,7 @@ export default function Portfolio() {
                     src={images[index]}
                     alt="images"
                     className=" absolute top-0 left-0 w-[100%] h-[100%] object-cover object-center"
+                    custom={direction}
                   />
                 </AnimatePresence>
                 <button
