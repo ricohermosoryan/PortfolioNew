@@ -66,7 +66,7 @@ export default function Portfolio() {
               My Projects
             </p>
             <div className="container flex">
-              <div className=" m-auto aspect-[16/9] relative overflow-hidden rounded-[16px] w-[120vh]">
+              <div className=" m-auto aspect-[16/9] relative overflow-hidden rounded-[16px] w-[50vh] md:w-[70vh] lg:w-[120vh]">
                 <AnimatePresence initial={false} custom={direction}>
                   <a
                     href={imageLinks[index]}
@@ -90,13 +90,13 @@ export default function Portfolio() {
                   className="p-2 bg-white rounded-full hover:bg-slate-200 absolute top-[50%] left-3"
                   onClick={prevStep}
                 >
-                  <FaChevronLeft />
+                  <FaChevronLeft className="text-black" />
                 </button>
                 <button
                   className="p-2 bg-white rounded-full hover:bg-slate-200 absolute top-[50%] right-3"
                   onClick={nextStep}
                 >
-                  <FaChevronRight />
+                  <FaChevronRight className="text-black" />
                 </button>
               </div>
             </div>
