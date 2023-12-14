@@ -48,7 +48,7 @@ export default function Home() {
         <section className="flex items-center justify-center flex-col gap-12 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
             <div className="w-full h-full flex flex-col items-center lg:items-center justify-center gap-4">
-              <div className="text-left w-[300px] mt-[100px] md:w-[600px] lg:ms-[300px] lg:w-[650px] lg:mt-[180px]">
+              <div className="text-left w-[300px] mt-[100px] md:w-[600px] lg:ms-[300px] lg:w-[650px] lg:mt-[180px] md:mt-[70px]">
                 <motion.h1
                   className=" text-[2.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-semibold"
                   variants={list}
@@ -152,11 +152,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-full h-full flex items-start justify-center lg:items-center md:mt-[20px]">
+            <div className="w-[200px] h-[200px] ms-[90px] lg:ms-0 md:w-[300px] md:h-[300px] md:ms-[230px] lg:w-[830px] lg:h-[700px] flex items-start justify-center lg:items-center md:mt-[20px] bg-no-repeat bg-center rounded-full -rotate-[30deg]">
               <motion.img
-                src="/src/assets/iconname.jpg"
+                src="/src/assets/profilenew.png "
                 alt="image"
-                className=" w-[200px] h-[200px] md:w-[290px] md:h-[290px] lg:w-[350px] lg:h-[350px] rounded-full object-cover shadow-xl  lg:absolute lg:right-[400px] lg:top-[200px] "
+                className=" w-[200px] h-[200px] md:w-[290px] md:h-[290px] lg:w-[350px] lg:h-[350px] rounded-full object-cover shadow-xl  lg:absolute lg:right-[300px] lg:top-[100px] shadow-sky-500/50"
                 initial={{ y: 0 }}
                 animate={{ y: [-10, 10, -10] }}
                 transition={{
