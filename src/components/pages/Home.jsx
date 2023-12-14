@@ -1,6 +1,7 @@
 import React from "react";
 import PageTransition from "../PageTransition";
 import { AnimatePresence, motion } from "framer-motion";
+import profile from "../../assets/profilenew.png";
 
 export default function Home() {
   const text1 = "Hi,";
@@ -154,7 +155,7 @@ export default function Home() {
 
             <div className="w-[200px] h-[200px] ms-[90px] lg:ms-0 md:w-[300px] md:h-[300px] md:ms-[230px] lg:w-[830px] lg:h-[700px] flex items-start justify-center lg:items-center md:mt-[20px] bg-no-repeat bg-center rounded-full -rotate-[30deg]">
               <motion.img
-                src="/src/assets/profilenew.png "
+                src={profile}
                 alt="image"
                 className=" w-[200px] h-[200px] md:w-[290px] md:h-[290px] lg:w-[350px] lg:h-[350px] rounded-full object-cover shadow-xl  lg:absolute lg:right-[300px] lg:top-[100px] shadow-sky-500/50"
                 initial={{ y: 0 }}
