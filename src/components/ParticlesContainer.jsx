@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+// import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 export default function ParticlesContainer() {
@@ -16,7 +16,7 @@ export default function ParticlesContainer() {
       // starting from v2 you can add only the features you need reducing the bundle size
       //await loadAll(engine);
       //await loadFull(engine);
-      await loadSlim(engine);
+      await loadFull(engine);
       //await loadBasic(engine);
     }).then(() => {
       setInit(true);
@@ -52,7 +52,7 @@ export default function ParticlesContainer() {
             quantity: 90,
           },
           repulse: {
-            distance: 300,
+            distance: 150,
             duration: 0.4,
           },
         },
@@ -63,7 +63,7 @@ export default function ParticlesContainer() {
         },
         links: {
           color: "#87ceeb",
-          distance: 150,
+          distance: 90,
           enable: true,
           opacity: 0.5,
           width: 1,
@@ -86,7 +86,7 @@ export default function ParticlesContainer() {
             enable: true,
             area: 800,
           },
-          value: 80,
+          value: 250,
         },
         opacity: {
           value: 0.5,
