@@ -52,7 +52,7 @@ export default function Portfolio() {
 
   const imageLinks = [
     "https://mini-project-2-nine.vercel.app/",
-    "https://ricohermosoryan.github.io/Mini-Project-1/HeroHaven.html",
+    "https://ricohermosoryan.github.io/Mini-Project-1/",
     "https://ricohermosoryan.github.io/zalora-clone/zalorasample.html",
   ];
 
